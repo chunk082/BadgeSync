@@ -1,16 +1,35 @@
-In SyncHabboBadge.php
-Look for this line..
-"$imagePath = '/var/www/assets/swf/c_images/album1584';" replace if your own directory path.
+# Badge Sync Script
 
-In SyncHabboonBadge.php
-Look for this line
-$savePath = '/var/www/assets/swf/c_images/album1584/'; replace if your own directory path.
+## Configuration
 
-You need to run the command seperately..
+**Update the following lines before running the script:**
 
-For SynHabboBadge.php
-php artisan habbo:sync-badges --hotel=com --limit=1000  (You change the limit max 2000) This script is only for Habbo.com (English Only)
+In `SyncHabboBadge.php`:
+```php
+$imagePath = '/var/www/assets/swf/c_images/album1584/';
+```
+Replace the path above with your own badge image directory path.
 
-For SyncHabboonBadge.php
+In `SyncHabboonBadge.php`:
+```php
+$savePath = '/var/www/assets/swf/c_images/album1584/';
+```
+Replace the path above with your own save location.
+
+---
+
+## Usage
+
+Run the commands separately:
+
+### For Habbo.com (English Only):
+```bash
+php artisan habbo:sync-badges --hotel=com --limit=1000
+```
+
+### For Habboon:
+```bash
 php artisan habboon:sync-badges
+```
 
+> 💡 You can adjust the `--limit` as needed. The max is `2000`.
