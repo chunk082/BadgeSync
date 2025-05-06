@@ -25,11 +25,24 @@ Run the commands separately:
 ### For Habbo.com (English Only):
 ```bash
 php artisan habbo:sync-badges --hotel=com --limit=1000
+
+```
+To download PNG Format 
+
+```bash
+php artisan habbo:sync-badges --format=png
 ```
 
 ### For Habboon:
 ```bash
 php artisan habboon:sync-badges
+```
+
+To downlopad in PNG format
+
+```bash
+php artisan habboon:sync-badges --format=png
+
 ```
 
 > 💡 You can adjust the `--limit` as needed. The max is `2000`.
